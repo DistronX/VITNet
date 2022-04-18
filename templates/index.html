@@ -4,17 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>VITNet</title>
 </head>
 <body>
-    {% if session %}
-        You are logged in already
-    {% else %}
-        <h1>Login</h1>
-        <form action="">
-            <input type="text" name="username" id="username">
-            <input type="password" name="password" id="password">
-        </form>
-    {% endif %}
+    <div class="logo">
+        <span class="logo-text">VITNet</span>
+        <br>
+        <span class="lime-text">V</span>izualize.
+        <span class="lime-text">I</span>nfer.
+        <span class="lime-text">T</span>rain.
+        <span class="lime-text">Net</span>works
+    </div>
+    <div class="stack">
+        <div class="card">
+            <div class="title">
+                Training
+            </div>
+            <p class="content">
+                Provide your own image dataset and let VITNet generate a model for you.
+            </p>
+            <a href="/train"><button class="yellow">Go</button></a>
+        </div>
+
+        <div class="card">
+            <div class="title">
+                Vizualization
+            </div>
+            <p class="content">
+                Vizualize your model as a neural network with a graphical representation.
+            </p>
+            <a href="/visualize"><button class="purple">Go</button></a>
+        </div>
+
+        <div class="card">
+            <div class="title">
+                Inference
+            </div>
+            <p class="content">
+                Upload your model weights and draw an inference from an image.
+            </p>
+            <a href="/infer"><button class="pink">Go</button></a>
+        </div>
+    </div>
 </body>
 </html>

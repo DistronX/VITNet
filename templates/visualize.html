@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../static/js/zoom.js"></script>
+    <title>Third Page</title>
+
+    <style>
+        body{
+            background-color: rgb(20, 20, 20);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #backarrow{
+            color: white;
+            font-size: 50px;
+            font-weight: bolder;
+            left: 10px;
+            margin-top: 10px;
+        }
+        #sec{
+            padding-bottom: 20px;
+            
+        }
+        #msec{
+            justify-content: center;
+            margin: auto;
+            max-width: 1200px;
+            display: flex;
+        }
+        #resultSection{ 
+            background-color: #333333;
+            width: 750px;
+            height: 500px;
+            left: 500px;
+            float: right;
+            margin-left: 40px;
+            margin-top: 15px;
+            border: 1px #333333;
+            border-radius: 25px;
+            
+        }
+        #colorUpload{
+            background-color: #333333;
+            width: 300px;
+            height: 150px;
+            border: 1px #333333;
+            border-radius: 25px;
+            margin-bottom: 40px;
+            cursor: pointer;
+        }
+        #weightUpload{
+            background-color: #333333;
+            width: 300px;
+            height: 150px;
+            border: 1px #333333;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" style="text-decoration: none;"><p id="backarrow" >&#8592;</p></a>
+    <div id="msec">
+        <div id="sec">
+            <div id="weightUpload">
+                <p style="font-size: 18px; text-align: start; color: white;padding: 10px;">Weights Upload</p>
+
+                <center style="margin-top: 4%;">
+                    <label for="image" style="cursor: pointer;">
+                        <input type="file" name="image" id="image" style="display:none;"/>
+                        <img src="../static/img/file.png" style="width: 70px;"/>
+                    </label>
+                </center>
+            </div>
+            <div id="colorUpload">
+                <p style="font-size: 18px; text-align: start; color: white;padding: 10px;">Color Scheme</p>
+
+                <!-- <center style="margin-top: 10%;">
+                    <img src="img.png">
+                </center> -->
+                <center style="margin-top: 10%;">
+                    <label for="color" style="cursor: pointer;">
+                        <input type="color" name="color" id="color" style="display:none;"/>
+                        <img src="../static/img/color.png" style="width: 160px;"/>
+                    </label>
+                </center>
+            </div>
+            
+        </div>
+        <div id="resultSection">
+            <p style="float: right;width: 50px; height:80px; margin-right: 20px; font-size: 20px;margin-top: 20px;">
+                <button type="button" style="width: 30px; height: 30px;margin-bottom: -30px; font-size: 20px;">+</button>
+                <br><br>
+                <button type="button" style="width: 30px; height: 30px;font-size: 20px;">-</button>
+             </p>
+            <p style="font-size: 18px; text-align: start; color: white;padding: 10px;margin-top: 0px;">Visualize</p>
+            
+            <center style="margin-top: 15%;">
+                <img id="myimage" src="../static/img/neuralnet.png" width="90%">
+            </center>
+
+            
+        </div>
+    </div>
+</body>
+</html>
