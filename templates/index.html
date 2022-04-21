@@ -26,7 +26,7 @@
       <div class="card mb-4 box-shadow text-center">
         <div class="card-body">
           <h3 class="card-title">Training</h3>
-          <img class="cta-img" src="/static/img/neural.png" alt="">
+          <img class="cta-img" src="{{ url_for('static', filename='img/neural.png') }}" alt="">
           <p>Provide your own image dataset and let VITNet generate a model for you.</p>
           <p><a class="btn btn-danger" href="/train" role="button">Train »</a></p>
         </div>
@@ -37,7 +37,7 @@
       <div class="card mb-4 box-shadow text-center">
         <div class="card-body">
           <h3 class="card-title">Inference</h3>
-          <img class="cta-img" src="/static/img/knowledge.png" alt="">
+          <img class="cta-img" src="{{ url_for('static', filename='img/knowledge.png') }}" alt="">
           <p>Upload your model weights and draw an inference from an image.</p>
           <p><a class="btn btn-warning" href="/infer" role="button">Infer »</a></p>
         </div>
@@ -48,7 +48,7 @@
       <div class="card mb-4 box-shadow text-center">
         <div class="card-body">
           <h3 class="card-title">Visualization</h3>
-          <img class="cta-img" src="/static/img/witness.png" alt="">
+          <img class="cta-img" src="{{ url_for('static', filename='img/witness.png') }}" alt="">
           <p>Vizualize your model as a neural network with a graphical representation.</p>
           <p><a class="btn btn-success" href="/visualize" role="button">Visualize »</a></p>
         </div>

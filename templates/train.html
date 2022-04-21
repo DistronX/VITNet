@@ -17,10 +17,10 @@
             <div class="card mb-4 box-shadow">
                 <div class="card-body">
                     <h4 class="card-title">Fine Tune Settings</h4>
-                    <form action="/begin" method="POST" class="mt-4 mb-4">
+                    <form action="/begin" method="POST" class="mt-4 mb-4" enctype = "multipart/form-data">
                         <div class="mt-4">
                             <label for="folder">Upload Zip File</label>
-                            <input type="file" name="folder" id="folder" class="form-control">
+                            <input type="file" name="file" id="file" class="form-control" enctype = "multipart/form-data">
 
                             <label for="epochs" class="mt-4">Number of Epochs</label>
                             <input type="number" name="epochs" id="epochs" class="form-control">

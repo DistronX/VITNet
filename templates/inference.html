@@ -1,106 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Second Page</title>
-
-    <style>
-        body{
-            background-color: rgb(20, 20, 20);
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        #backarrow{
-            color: white;
-            font-size: 50px;
-            font-weight: bolder;
-            left: 10px;
-            margin-top: 10px;
-        }
-        #sec{
-            padding-bottom: 20px;
-            
-        }
-        #msec{
-            justify-content: center;
-            margin: auto;
-            max-width: 1000px;
-            display: flex;
-        }
-        #resultSection{ 
-            background-color: #333333;
-            width: 450px;
-            height: 500px;
-            left: 500px;
-            float: right;
-            margin-left: 40px;
-            margin-top: 15px;
-            border: 1px #333333;
-            border-radius: 25px;
-            
-        }
-        #imageUpload{
-            background-color: #333333;
-            width: 400px;
-            height: 225px;
-            border: 1px #333333;
-            border-radius: 25px;
-            margin-bottom: 40px;
-            cursor: pointer;
-
-        }
-        #weightUpload{
-            background-color: #333333;
-            width: 400px;
-            height: 225px;
-            border: 1px #333333;
-            border-radius: 25px;
-            cursor: pointer;
-        }
-        #image{
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-    <a href="index.html" style="text-decoration: none;"><p id="backarrow" >&#8592;</p></a>
-    <div id="msec">
-        <div id="sec">
-            <div id="imageUpload">
-                
-                <p style="font-size: 18px; text-align: start; color: white;padding: 10px;">Image Upload</p>
-                    <center style="margin-top: 10%;">
-                    <img src="img.png">
-                </center>
-                <center style="margin-top: 10%;">
-                    <label for="image" style="cursor: pointer;">
-                        <input type="file" name="image" id="image" style="display:none;"/>
-                        <img src="../static/img/img.png"/>
-                    </label>
-                </center>
-            </div>
-            <div id="weightUpload">
-                <p style="font-size: 18px; text-align: start; color: white;padding: 10px;">Weights Upload</p>
-
-                <center style="margin-top: 10%;">
-                    <label for="image" style="cursor: pointer;">
-                        <input type="file" name="image" id="image" style=" display: none;"/>
-                        <img src="../static/img/file.png"/>
-                    </label>
-                </center>
-            </div>
-        </div>
-        <div id="resultSection">
-            <p style="font-size: 18px; text-align: start; color: white;padding: 10px;margin-top: 0px;">Result</p>
-            <center style="margin-top: 25%;">
-                <img src="../static/img/hhk.png">
-            </center>
-        </div>
-    </div>
-</body>
-</html> -->
-
 {% extends 'base.html' %}
 
 {% block content %}
@@ -111,14 +8,14 @@
                 <div class="card mb-4 box-shadow">
                     <div class="card-body">
                         <h4 class="card-title">Upload Files below</h4>
-                        <form action="" class="mt-4 mb-4">
+                        <form action="/runinference" method="POST" class="mt-4 mb-4" enctype = "multipart/form-data">
                             <div class="mt-4">
                                 <label for="img">Upload Image</label>
-                                <input type="file" name="img" id="img" class="form-control">
+                                <input type="file" name="img_upload" id="img_upload" class="form-control" >
                             </div>
                             <div class="mt-4">
                                 <label for="weights">Upload Weights File</label>
-                                <input type="file" name="weights" id="weights" class="form-control">
+                                <input type="file" name="weights_upload" id="weights_upload" class="form-control">
                             </div>
                             <button type="submit" class="btn btn-secondary mt-4">Submit</button>
                         </form>
@@ -130,8 +27,8 @@
                 <div class="card mb-4 box-shadow text-center">
                     <div class="card-body">
                         <!-- <h4 class="card-title">Fine Tune Settings</h4> -->
-                        <img src="/static/img/neural.png" alt="">
-                        <h4>Class: Flower</h4>
+                        <img src="{{ url_for('static', filename=fname) }}" alt="">
+                        <h4>Class: {{ content }}</h4>
                     </div>
                 </div>
             </div>

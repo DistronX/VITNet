@@ -116,7 +116,7 @@
                 <div class="card mb-4 box-shadow">
                     <div class="card-body">
                         <h4 class="card-title">Upload Files below</h4>
-                        <form action="" class="mt-4 mb-4">
+                        <form action="/netron" method="POST" class="mt-4 mb-4" enctype = "multipart/form-data">
                             <div class="mt-4">
                                 <label for="weights">Upload Weights File</label>
                                 <input type="file" name="weights" id="weights" class="form-control">
@@ -127,14 +127,15 @@
                 </div>
             </div>
     
-            <div class="col-md-8">
+            <!-- <div class="col-md-8">
                 <div class="card mb-4 box-shadow text-center">
                     <div class="card-body">
-                        <!-- <h4 class="card-title">Fine Tune Settings</h4> -->
+                        <h4 class="card-title">Fine Tune Settings</h4>
                         <img src="/static/img/neural.png" alt="">
+                        <iframe src="/netron" title="description"></iframe>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 {% endblock %}
