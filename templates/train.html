@@ -107,7 +107,14 @@
                     <h4 class="card-title">Fine Tune Settings</h4>
                     <form action="" class="mt-4 mb-4">
                         <div class="mt-4">
-                            <input type="file" name="weights" id="weights" class="form-control">
+                            <label for="folder">Upload Zip File</label>
+                            <input type="file" name="folder" id="folder" class="form-control">
+
+                            <label for="epochs" class="mt-4">Number of Epochs</label>
+                            <input type="number" name="epochs" id="epochs" class="form-control">
+
+                            <label for="batch" class="mt-4">Batch Size</label>
+                            <input type="number" name="batch" id="batch" class="form-control">
                         </div>
                     <button type="submit" class="btn btn-primary mt-4">Begin Training</button>
                 </form>
