@@ -1,91 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/style.css">
-    <title>Train</title>
-</head>
-<body>
-    <div class="grid">
-        <div class="row">
-            <div class="card less-padding left">
-                <div class="title">
-                    Instructions for upload
-                </div>
-                <p class="content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-                    culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-            <div class="card less-padding left">
-                <div class="title">
-                    Classes
-                </div>
-                <div class="content">
-                    <ul>
-                        <li>Pomeranian</li>
-                        <li>Shiba Inu</li>
-                        <li>Husky</li>
-                        <li>Spitz</li>
-                        <li>Pitbull</li>
-                        <li>Doberman</li>
-                        <li>German Shepard</li>
-                    </ul>
-                </div>
-                <div class="content">
-
-                </div>
-            </div>
-            <div class="card less-padding">
-                <div class="title left">
-                    Progress
-                </div>
-            </div>
-            <div class="card less-padding">
-                <div class="title left">
-                    Accuracy
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="card">
-                <div class="title">
-                    <label for="image" style="cursor: pointer;">
-                        <input type="file" name="image" id="image" style="display:none;"/>
-                        <img src="../static/img/file.png" style="width: 70px;"/>
-                    </label>
-                </div>
-            </div>
-            <div class="card less-padding">
-                <div class="title">
-                    First
-                </div>
-            </div>
-            <div class="card less-padding">
-                <div class="title">
-                    Override Default Settings for Advanced Users
-                </div>
-                <div class="slidecontainer left">
-                    <p>Train/Test Split</p>
-                    <input type="range" min="1" max="100" value="80" class="slider" id="myRange">
-                  </div>
-                <button class="dark-grey">Train Model</button>
-            </div>
-        </div>
-    </div>
-</body>
-</html> -->
-
-
 {% extends 'base.html' %}
 
 {% block content %}
@@ -105,7 +17,7 @@
             <div class="card mb-4 box-shadow">
                 <div class="card-body">
                     <h4 class="card-title">Fine Tune Settings</h4>
-                    <form action="" class="mt-4 mb-4">
+                    <form action="/begin" method="POST" class="mt-4 mb-4">
                         <div class="mt-4">
                             <label for="folder">Upload Zip File</label>
                             <input type="file" name="folder" id="folder" class="form-control">
