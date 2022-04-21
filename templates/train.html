@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -83,4 +83,37 @@
         </div>
     </div>
 </body>
-</html>
+</html> -->
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row py-4">
+        <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+                <div class="card-body">
+                    <h4 class="card-title">Instructions</h4>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="card mb-4 box-shadow">
+                <div class="card-body">
+                    <h4 class="card-title">Fine Tune Settings</h4>
+                    <form action="" class="mt-4 mb-4">
+                        <div class="mt-4">
+                            <input type="file" name="weights" id="weights" class="form-control">
+                        </div>
+                    <button type="submit" class="btn btn-primary mt-4">Begin Training</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

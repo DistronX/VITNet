@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -70,10 +70,9 @@
             <div id="imageUpload">
                 
                 <p style="font-size: 18px; text-align: start; color: white;padding: 10px;">Image Upload</p>
-
-                <!-- <center style="margin-top: 10%;">
+                    <center style="margin-top: 10%;">
                     <img src="img.png">
-                </center> -->
+                </center>
                 <center style="margin-top: 10%;">
                     <label for="image" style="cursor: pointer;">
                         <input type="file" name="image" id="image" style="display:none;"/>
@@ -100,4 +99,42 @@
         </div>
     </div>
 </body>
-</html>
+</html> -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row py-4">
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-body">
+                        <h4 class="card-title">Upload Files below</h4>
+                        <form action="" class="mt-4 mb-4">
+                            <div class="mt-4">
+                                <label for="img">Upload Image</label>
+                                <input type="file" name="img" id="img" class="form-control">
+                            </div>
+                            <div class="mt-4">
+                                <label for="weights">Upload Weights File</label>
+                                <input type="file" name="weights" id="weights" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-secondary mt-4">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-8">
+                <div class="card mb-4 box-shadow text-center">
+                    <div class="card-body">
+                        <!-- <h4 class="card-title">Fine Tune Settings</h4> -->
+                        <img src="/static/img/neural.png" alt="">
+                        <h4>Class: Flower</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
