@@ -115,7 +115,7 @@ def index():
 
         # if model_file_suffix not in file_type_list:
         #     return render_template('error.html')
-        return render_template('netron.html', model_file=model_file.filename)
+        return render_template('netron.html', model_file="dataset/train/models/"+model_file.filename)
 
 @app.route('/downloadfile', methods=['GET'])
 def downloadfile():
