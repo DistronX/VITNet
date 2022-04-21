@@ -71,6 +71,10 @@ def upload_file():
             train(file_path, batch, epochs)
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
     port = int(os.environ.get('PORT', 5100))
+=======
+    port = int(os.environ.get('PORT', 8080))
+>>>>>>> cf5317c641d2258b43146035e0786a64519b6326
     app.run(host='0.0.0.0', port=port)
